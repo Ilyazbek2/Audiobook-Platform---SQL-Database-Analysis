@@ -1,0 +1,10 @@
+-- Users who listened to "Coraline" more than 10%
+SELECT 
+    COUNT(DISTINCT ac.user_id) as total_users,
+    COUNT(DISTINCT CASE 
+        WHEN ac.progress > ab.duration * 0.1 THEN ac.user_id 
+    END) as engaged_users
+FROM audio_cards ac
+JOIN audiobooks ab ON ac.audiobook_uuid = ab.uuid
+WHERE ab.title = 'Coraline';
+```
