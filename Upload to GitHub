@@ -1,0 +1,9 @@
+# Initialize
+git init
+git add .
+git commit -m "Initial commit: Audiobook SQL Analysis"
+
+# Connect to GitHub
+git branch -M main
+git remote add origin https://github.com/yourusername/audiobook-analysis.git
+git push -u origin main
