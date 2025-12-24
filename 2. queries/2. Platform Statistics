@@ -1,0 +1,12 @@
+```sql
+-- Listening hours by OS and book (excluding tests)
+SELECT 
+    l.os_name, 
+    ab.title, 
+    COUNT(DISTINCT l.user_id) AS users,
+    ROUND(SUM(l.position_to - l.position_from) / 3600, 2) AS hours
+FROM listenings l
+JOIN audiobooks ab ON l.audiobook_uuid = ab.uuid
+WHERE l.is_test = 0
+GROUP BY l.os_name, ab.title;
+```
