@@ -33,17 +33,3 @@ GROUP BY ab.title
 ORDER BY completed DESC LIMIT 1;
 ```
 
-### 3. **.gitignore**
-```
-*.log
-.DS_Store
-*.tmp
-```
-
-### 4. **LICENSE**
-```
-MIT License
-
-Copyright (c) 2024 Your Name
-
-Permission is hereby granted, free of charge...
